@@ -1,6 +1,7 @@
 package br.com.adriano.reclameaqui.sdk.service;
 
-import org.springframework.beans.factory.annotation.Value;
+import java.util.ResourceBundle;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -8,20 +9,16 @@ import br.com.adriano.reclameaqui.sdk.model.Company;
 
 public class CompanyService {
 	
-	@Value("${reclameaqui.companies-url}")
-	private String companyEndpoint;
-	RestTemplate restTemplate = new RestTemplate();
+	private static String companyEndpoint = ResourceBundle.getBundle("application").getString("reclameaqui.companies-url"); 
+	private static RestTemplate restTemplate = new RestTemplate();
 	
-	
-	public ResponseEntity<Company> getCompanyDetailsById() {
+
+	public static ResponseEntity<Company> getCompanyDetailsById(int companyId) {
 		
-		String url = companyEndpoint + "";
+		String url = companyEndpoint + companyId;
 		
-		ResponseEntity<Company> response = restTemplate.getForEntity(url, Company.class);
-		
-		
-		return response;
-		
+		return restTemplate.getForEntity(url, Company.class);
+
 	}
 
 }
