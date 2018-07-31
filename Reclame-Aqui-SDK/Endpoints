@@ -1,0 +1,34 @@
+Os Endpoints utilizados nesse projeto são:
+
+companyName - Nome da empresa, por exemplo: Itaú
+companyID - ID da empresa no sistema do Reclame Aqui, no caso do Itaú: 2406
+complainsQuantity - Quantidade de reclamações a serem exibidas
+complainID - ID da reclamação
+
+https://iosearch.reclameaqui.com.br
+
+/raichu-io-site-search-0.0.1-SNAPSHOT
+/companies/search/{companyName}
+/saleproducts/company/{companyID}/term/all/featured/all/0/5/productStatusCode/desc
+/query/companyComplains/{complainsQuantity}/0?company={companyID}
+/query/companyComplains/{complainsQuantity}/0?company={companyID}&evaluated=bool:true
+/query/companyComplains/{complainsQuantity}/0?company={companyID}&deleted=bool:true
+/complains?index=0&offset=4&order=created&orderType=desc&fields=id,title,evaluation&company={companyID}&status=ANSWERED&evaluated=bool:true&solved=bool:true&deleted=bool:false
+/complains?productType=undefined&company={companyID}&offset=10&deleted=bool:false
+/companies/redirect
+
+
+
+https://iosite.reclameaqui.com.br
+
+/raichu-io-site-0.0.1-SNAPSHOT
+/company/{companyID}/indexevolution
+/company/shortname/{companyName}
+/company/{companyID}/public
+/complain/{complainID}/public
+/company/{companyID}/stores-location
+
+
+https://api-premio.reclameaqui.com.br
+
+companies/raichuId/{companyID}

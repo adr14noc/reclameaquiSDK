@@ -1,43 +1,50 @@
 package br.com.adriano.reclameaqui.sdk.model;
 
 public class Company {
-	private String name;
-	private String logoUrl;
-	private Boolean hasMediaKit;
-	private Boolean hasWidget;
-	private CompanyCategory category;
+	private String created ;
+	private String companyName;
+	private int count ;
+	private long id;
+	private String fantasyName;
+	private String shortname;
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getLogoUrl() {
-		return logoUrl;
-	}
-	public void setLogoUrl(String logoUrl) {
-		this.logoUrl = logoUrl;
-	}
-	public Boolean getHasMediaKit() {
-		return hasMediaKit;
-	}
-	public void setHasMediaKit(Boolean hasMediaKit) {
-		this.hasMediaKit = hasMediaKit;
-	}
-	public Boolean getHasWidget() {
-		return hasWidget;
-	}
-	public void setHasWidget(Boolean hasWidget) {
-		this.hasWidget = hasWidget;
-	}
-	public CompanyCategory getCategory() {
-		return category;
-	}
-	public void setCategory(CompanyCategory category) {
-		this.category = category;
-	}
 	
+	public String getCreated() {
+		return created;
+	}
+	public void setCreated(String created) {
+		this.created = created;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getFantasyName() {
+		return fantasyName;
+	}
+	public void setFantasyName(String fantasyName) {
+		this.fantasyName = fantasyName;
+	}
+	public String getShortname() {
+		return shortname;
+	}
+	public void setShortname(String shortname) {
+		this.shortname = shortname;
+	}
 	
 	
 
